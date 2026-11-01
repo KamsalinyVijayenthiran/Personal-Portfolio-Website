@@ -1,0 +1,234 @@
+.about-section {
+  position: relative;
+  padding: 6.5rem 5vw 5rem 5vw;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Title: "About Me" */
+.about-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+.title-cyan {
+  background: linear-gradient(135deg, #00d2d3 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Two-column Grid (55% left / 45% right) */
+.about-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.22fr 1fr;
+  gap: 2.25rem;
+  align-items: stretch;
+}
+
+/* Left Card: Hello! & Bio paragraphs */
+.about-left-card {
+  background: rgba(9, 23, 38, 0.95);
+  border: 1.5px solid rgba(6, 182, 212, 0.7);
+  border-radius: 18px;
+  padding: 2.75rem 2.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-left-card:hover {
+  transform: translateY(-3px);
+  border-color: #22d3ee;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(6, 182, 212, 0.25);
+}
+
+.about-greeting {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.about-paragraph {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Download Resume Button in About */
+.about-resume-wrapper {
+  margin-top: 1.6rem;
+}
+
+.about-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: rgba(6, 182, 212, 0.12);
+  color: #22d3ee;
+  border: 1.5px solid rgba(6, 182, 212, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.01em;
+}
+
+.about-resume-btn:hover {
+  background: rgba(6, 182, 212, 0.22);
+  border-color: #22d3ee;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Right Column: 5 Info Cards */
+.about-right-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  justify-content: space-between;
+}
+
+.info-card {
+  background: rgba(12, 28, 46, 0.92);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.info-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(6, 182, 212, 0.55);
+  background: rgba(16, 36, 58, 0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(6, 182, 212, 0.18);
+}
+
+.info-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(7, 21, 36, 0.95);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+}
+
+.info-icon {
+  color: #22d3ee;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.info-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.info-desc {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #a0aec0;
+}
+
+/* Duration meta badge for experience card */
+.info-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+
+.duration-icon {
+  color: #22d3ee;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-left-card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .about-right-cards {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 4.5rem 1.25rem 3.5rem 1.25rem;
+  }
+
+  .about-left-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .about-greeting {
+    font-size: 1.65rem;
+  }
+
+  .about-paragraph {
+    font-size: 0.95rem;
+  }
+
+  .info-card {
+    padding: 1rem;
+    gap: 0.9rem;
+  }
+
+  .info-icon-wrapper {
+    width: 38px;
+    height: 38px;
+  }
+}

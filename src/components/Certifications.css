@@ -1,0 +1,205 @@
+.certifications-section {
+  position: relative;
+  padding: 6.5rem 5vw 7rem 5vw;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.certifications-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Header */
+.certifications-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* ================= 4-COLUMN DESKTOP GRID ================= */
+.certifications-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Certification Card */
+.cert-card {
+  position: relative;
+  background: rgba(9, 23, 38, 0.95);
+  border: 1.5px solid rgba(6, 182, 212, 0.35);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem 1.4rem 1.5rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cert-card-link {
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: #22d3ee;
+  box-shadow: 
+    0 14px 35px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(6, 182, 212, 0.25);
+}
+
+.cert-card-link:hover .cert-link-icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+/* Card top subtle cyan glow line */
+.cert-card .card-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  opacity: 0.85;
+}
+
+/* Cyan badge/certificate icon inside rounded square border */
+.cert-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(7, 21, 36, 0.95);
+  border: 1.5px solid rgba(6, 182, 212, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.15);
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover .cert-icon-box {
+  border-color: #22d3ee;
+  background: rgba(6, 182, 212, 0.12);
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(6, 182, 212, 0.3);
+}
+
+.cert-badge-icon {
+  color: #22d3ee;
+}
+
+/* Content: Title & Provider */
+.cert-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.45rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.cert-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  word-break: break-word;
+  text-align: center;
+}
+
+.cert-provider {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* Footer: Completion Year */
+.cert-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cert-link-icon {
+  position: absolute;
+  right: 0.25rem;
+  color: var(--teal-light);
+  opacity: 0.65;
+  transition: all 0.25s ease;
+}
+
+.cert-year-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #22d3ee;
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  letter-spacing: 0.03em;
+}
+
+.calendar-icon {
+  color: #22d3ee;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .certifications-section {
+    padding: 5rem 1.25rem 4rem 1.25rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .cert-card {
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  }
+
+  .cert-title {
+    font-size: 1.1rem;
+  }
+}
