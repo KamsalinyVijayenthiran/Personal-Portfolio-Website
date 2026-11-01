@@ -79,7 +79,7 @@ const Hero = () => {
             </a>
 
             <a 
-              href="/resume.pdf" 
+              href={`${import.meta.env.BASE_URL}resume.pdf`} 
               download="Kamsaliny_Vijayenthiran_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
