@@ -8,6 +8,7 @@ A modern and responsive personal portfolio developed to showcase my skills, proj
 
 ## Technologies
 - React.js – Building interactive and reusable UI components
+- JavaScript – Implementing dynamic functionality
 - HTML5 – Structuring web content
 - CSS3 – Styling and responsive layouts
 
